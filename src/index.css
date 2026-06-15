@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mercado Livre Design System - All colors in HSL */
+
+@layer base {
+  :root {
+    /* ML Brand Colors */
+    --ml-yellow: 54 100% 50%;
+    --ml-blue: 214 96% 59%;
+    --ml-blue-dark: 214 96% 45%;
+    --ml-blue-light: 214 96% 70%;
+    
+    --background: 0 0% 97%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    --primary: 214 96% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 54 100% 50%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 54 100% 50%;
+    --accent-foreground: 220 20% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 20% 20%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 96% 59%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 214 96% 59%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 20% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 20% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 214 96% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 54 100% 50%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 14% 20%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 54 100% 50%;
+    --accent-foreground: 220 20% 20%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 20% 20%;
+
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 214 96% 59%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 214 96% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 220 14% 20%;
+    --sidebar-ring: 214 96% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .ml-gradient {
+    background: linear-gradient(135deg, hsl(var(--ml-yellow)) 0%, hsl(var(--ml-blue)) 100%);
+  }
+  
+  .ml-card {
+    @apply bg-card rounded-lg border shadow-sm transition-shadow hover:shadow-md;
+  }
+}
